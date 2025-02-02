@@ -1,0 +1,268 @@
+@font-face {
+    font-family: 'Press Start 2P';
+    src: url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+}
+
+:root {
+    --primary-color: #8b4513;
+    --secondary-color: #deb887;
+    --background-color: #2f4f4f;
+    --text-color: #ffdead;
+    --accent-color: #cd853f;
+    --highlight-color: #d2691e;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Press Start 2P', cursive;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.header {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.1) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    pointer-events: none;
+}
+
+.title {
+    font-size: 3rem;
+    text-shadow: 4px 4px var(--accent-color);
+    margin-bottom: 1rem;
+    animation: glitch 1s infinite;
+}
+
+.nav {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    border-color: var(--highlight-color);
+    background: rgba(210, 105, 30, 0.2);
+    transform: scale(1.1);
+}
+
+.content-section {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-text {
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.note {
+    color: lightcoral;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.utilise {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.utilise img {
+    width: 150px;
+    height: auto;
+}
+
+.banque {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.banque img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.banque img:hover {
+    transform: scale(1.05);
+}
+
+@media (min-width: 1200px) {
+    .content-section {
+        padding: 3rem;
+    }
+    
+    .title {
+        font-size: 4rem;
+    }
+    
+    .content-text {
+        font-size: 1.2rem;
+    }
+
+    .nav-list {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+    .content-section {
+        padding: 2rem;
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .nav-list {
+        gap: 1.5rem;
+    }
+
+    .utilise {
+        flex-wrap: wrap;
+    }
+    
+    .utilise img {
+        width: 130px;
+    }
+
+    .banque {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+    .nav-list {
+        gap: 1rem;
+    }
+    
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .content-text {
+        font-size: 1rem;
+    }
+
+    .note {
+        font-size: 20px;
+    }
+
+    .utilise {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .utilise img {
+        width: 120px;
+    }
+    
+    .utilise p {
+        width: 100%;
+    }
+
+    .banque {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-link {
+        padding: 0.5rem;
+    }
+    
+    .content-section {
+        padding: 1rem;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .content-text {
+        font-size: 0.9rem;
+    }
+
+    .note {
+        font-size: 16px;
+    }
+    
+    .utilise img {
+        width: 100px;
+    }
+
+    .banque {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}

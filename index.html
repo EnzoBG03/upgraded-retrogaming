@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Découvrez le rétrogaming comme jamais auparavant. Un site réalisé par Enzo BENOIST-GIMET.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <title>Rétrogaming - Un voyage dans le temps</title>
+</head>
+<body>
+    <audio id="wii_sports">
+        <source src="./Sons/Wii Sports - Disque.mp3" type="audio/mp3">
+    </audio>
+    <audio id="son_bonus">
+        <source src="./Sons/Page - Accueil/Fresque/1UP.mp3" type="audio/mp3">
+    </audio>
+    <audio id="son_saut">
+        <source src="./Sons/Page - Accueil/Fresque/Saut.mp3" type="audio/mp3">
+    </audio>
+    <audio id="son_ecrase">
+        <source src="./Sons/Page - Accueil/Fresque/Ecrasé.mp3" type="audio/mp3">
+    </audio>
+    <audio id="son_grandi">
+        <source src="./Sons/Page - Accueil/Fresque/Grandir.mp3" type="audio/mp3">
+    </audio>
+    <audio id="son_termine">
+        <source src="./Sons/Page - Accueil/Fresque/Terminé.mp3" type="audio/mp3">
+    </audio>
+    <audio id="son_start">
+        <source src="./Sons/Page - Accueil/Super Mario Bros - Sol.mp3" type="audio/mp3">
+    </audio>
+
+    <header class="header" id="titre">
+        <h1 class="title" id="main-title">Le Rétrogaming</h1>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="#" class="nav-link" title="Revenez à l'accueil">Accueil</a></li>
+            <li><a href="quoi.html" class="nav-link" title="Découvrez un mouvement original">Qu'est-ce que c'est ?</a></li>
+            <li><a href="concept.html" class="nav-link" title="Apprenez les origines du rétrogaming">Le concept</a></li>
+            <li><a href="comment.html" class="nav-link" title="Découvrez comment prendre part au mouvement">Comment faire ?</a></li>
+            <li><a href="avin.html" class="nav-link" title="Prenez connaissance des bons et des mauvais côtés">Avantages et inconvénients</a></li>
+            <li><a href="opinion.html" class="nav-link" title="Lisez mon point de vue personnel">Mon opinion</a></li>
+            <li><a href="futur.html" class="nav-link" title="Imaginez l'avenir de ce mouvement">Le futur</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2 id="start" style="text-align: center; margin: 2rem; cursor: pointer;">Bienvenue sur la page d'accueil !</h2>
+
+        <div class="mario-fresque">
+            <div class="mario-container">
+                <img id="mario" class="mario-sprite" src="./Images/Page - Accueil/Fresque/Animation - Mario.png">
+                <img id="saut" class="mario-sprite" src="./Images/Page - Accueil/Fresque/Animation - Saut de Mario.png" style="display: none;">
+                <img id="grand" class="mario-sprite" src="./Images/Page - Accueil/Fresque/Animation - Grand Mario.png" style="display: none;">
+            </div>
+            <img class="goomba" data-index="0" src="./Images/Page - Accueil/Fresque/Goomba.png">
+            <img class="goomba" data-index="1" src="./Images/Page - Accueil/Fresque/Goomba.png">
+            <img class="goomba" data-index="2" src="./Images/Page - Accueil/Fresque/Goomba.png">
+            <img id="champignon" class="champignon" src="./Images/Page - Accueil/Fresque/Champignon.png">
+            <div style="width: 100%; text-align: center;">
+                <button id="termine">J'ai récupéré le champignon !</button>
+            </div>
+        </div>
+
+        <div class="presentation">
+            <h3>Sur ce site, vous vous apprêtez à découvrir un thème rempli de nostalgie.</h3>
+            <h3>Au fil des sections, étape par étape, vous apprendrez à connaître les différents points qui constituent le rétrogaming.</h3>
+            <h3>Pour vous plonger au mieux dans cette aventure, vous retrouverez plusieurs références aux anciens jeux qui ont probablement bercé votre enfance.</h3>
+            <h3>Des <i id="up" style="cursor: pointer; color: var(--highlight-color);" title="Celui-ci était un cadeau.">easter eggs</i> se sont cachés un peu partout dans les différentes sections de ce site. Saurez-vous les retrouver ?</h3>
+            <h3>(Par exemple, aidez Mario à récupérer ce champignon sans heurter un Goomba. Vous savez comment vous en débarasser, n'est-ce pas ?)</h3>
+            <h3 id="branche" style="margin-top: 2rem;">Il ne reste plus qu'à vous souhaiter une bonne lecture !</h3>
+            <img src="./Images/Page - Accueil/Manette SNES.png" alt="Manette SNES" style="width: 350px; margin-top: 0.5rem;">
+        </div>
+    </main>
+
+    <script src="./JS/script.js"></script>
+</body>
+</html>
